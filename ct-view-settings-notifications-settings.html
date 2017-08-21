@@ -1,5 +1,20 @@
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-tabs/paper-tabs.html">
+<link rel="import" href="../iron-pages/iron-pages.html">
+<link rel="import" href="../app-route/app-route.html">
+<link rel="import" href="../paper-material/paper-material.html">
+<link rel="import" href="../paper-progress/paper-progress.html">
 
+<link rel="import" href="../paper-input/paper-input-behavior.html">
+
+<link rel="import" href="../paper-material/paper-material.html">
+
+<link rel="import" href="../ct-core-utils/ct-app-styles.html">
+<link rel="import" href="../ct-core-utils/ct-api-consumer-behaviour.html">
+
+<link rel="import" href="../ct-category-settings/ct-category-settings.html">
+<link rel="import" href="../shared-styles/ct-application-theme.html">
+<link rel="import" href="../ct-setting-api/ct-setting-api.html">
 <!--
 `ct-view-settings-notifications-settings`
 Element to view notification settings on the Centular platform.
@@ -14,7 +29,12 @@ Element to view notification settings on the Centular platform.
         display: block;
       }
     </style>
-    <h2>Hello [[prop1]]!</h2>
+    <div class="row">
+      <div class="col-xs-12">
+        <ct-setting-api></ct-setting-api>
+        <ct-category-settings category="dormant-meters" category-display-name="Dormant Meters"></ct-category-settings>
+      </div>
+    </div>
   </template>
 
   <script>
@@ -23,10 +43,6 @@ Element to view notification settings on the Centular platform.
       is: 'ct-view-settings-notifications-settings',
 
       properties: {
-        prop1: {
-          type: String,
-          value: 'ct-view-settings-notifications-settings',
-        },
       },
 
     });
